@@ -5,27 +5,19 @@ benchmarks:
   funnyprint-benchmarks:
     dependencies:
     - base
+    - hscolour
+    - ipprint
     - funnyprint
     - criterion
     ghc-options:
     - -rtsopts
     - -threaded
+    - -O2
     - -with-rtsopts=-N
-    main: Main.hs
+    main: FunnyPrint.hs
     source-dirs: benchmark
-category: Other
-description: funnyprint is a new Haskeleton package.
-executables:
-  funnyprint:
-    dependencies:
-    - base
-    - funnyprint
-    ghc-options:
-    - -rtsopts
-    - -threaded
-    - -with-rtsopts=-N
-    main: Main.hs
-    source-dirs: executable
+category: Text
+description: see FunnyPrint.funnyPrint.
 extra-source-files:
 - CHANGELOG.md
 - LICENSE.md
@@ -37,22 +29,32 @@ github: Pitometsu/funnyprint
 library:
   dependencies:
   - base
+  - hscolour
+  - ipprint
+  ghc-options:
+  - -rtsopts
+  - -threaded
+  - -O2
+  - -with-rtsopts=-N
   source-dirs: library
 license: MIT
 maintainer: Yuriy Pitomets
 name: funnyprint
-synopsis: A new Haskeleton package.
+synopsis: funnyPrint function to colorize GHCi output.
 tests:
   funnyprint-test-suite:
     dependencies:
     - base
+    - hscolour
+    - ipprint
     - funnyprint
     - tasty
     - tasty-hspec
     ghc-options:
     - -rtsopts
     - -threaded
+    - -O2
     - -with-rtsopts=-N
-    main: Main.hs
+    main: FunnyPrint.hs
     source-dirs: test-suite
-version: '0.0.0'
+version: '0.0.1'
