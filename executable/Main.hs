@@ -16,6 +16,6 @@ exampleData = ExampleData { int = 42
 main :: IO ()
 main = do
   putStrLn "Example data:"
-  putStrLn $ prompt "λ " "Hello, world!" " >"
-  putStrLn $ prompt2 "λ " "enjoy colors ;)" " |"
+  putStrLn $ FunnyPrint.prompt "λ " "Hello, world!" " >"
+  putStrLn $ FunnyPrint.prompt2 "λ " "enjoy colors ;)" " |"
   FunnyPrint.funnyPrint exampleData
