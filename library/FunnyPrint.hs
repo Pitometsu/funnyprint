@@ -1,22 +1,15 @@
 -- | funnyPrint function to colorize GHCi output. See @FunnyPrint.funnyPrint@.
-module FunnyPrint (funnyPrint) where
+module FunnyPrint ( funnyPrint ) where
 
 import IPPrint ( pshow )
 import Language.Haskell.HsColour.Output ( TerminalType(..) )
-import Language.Haskell.HsColour.Colourise ( defaultColourPrefs
-                                           , Colour(..)
+import Language.Haskell.HsColour.Colourise ( Colour(..)
                                            , Highlight(..)
+                                           , defaultColourPrefs
                                            )
 import Language.Haskell.HsColour ( ColourPrefs(..)
                                  , Output(TTYg)
                                  , hscolour
-                                 -- , conid
-                                 -- , conop
-                                 -- , string
-                                 -- , char
-                                 -- , layout
-                                 -- , number
-                                 -- , keyglyph
                                  )
 
 -- | Colorize GHCi. UTF8 support. Smart indentatntion. Use as @:set -interactive-print=funnyPrint@.
