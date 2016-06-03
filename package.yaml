@@ -4,17 +4,16 @@
 benchmarks:
   funnyprint-benchmarks:
     dependencies:
-    - base
+    - base >= 2 && < 6
     - hscolour
-    - ipprint
+    - ipprint == 0.6
     - funnyprint
     - criterion
     ghc-options:
     - -rtsopts
     - -threaded
-    - -O2
     - -with-rtsopts=-N
-    main: FunnyPrint.hs
+    main: Main.hs
     source-dirs: benchmark
 category: Text
 description: see FunnyPrint.funnyPrint.
@@ -28,33 +27,28 @@ ghc-options: -Wall
 github: Pitometsu/funnyprint
 library:
   dependencies:
-  - base
+  - base >= 2 && < 6
   - hscolour
-  - ipprint
-  ghc-options:
-  - -rtsopts
-  - -threaded
-  - -O2
-  - -with-rtsopts=-N
+  - ipprint == 0.6
   source-dirs: library
 license: MIT
+license-file: LICENSE.md
 maintainer: Yuriy Pitomets
 name: funnyprint
 synopsis: funnyPrint function to colorize GHCi output.
 tests:
   funnyprint-test-suite:
     dependencies:
-    - base
+    - base >= 2 && < 6
     - hscolour
-    - ipprint
+    - ipprint == 0.6
     - funnyprint
     - tasty
     - tasty-hspec
     ghc-options:
     - -rtsopts
     - -threaded
-    - -O2
     - -with-rtsopts=-N
-    main: FunnyPrint.hs
+    main: Main.hs
     source-dirs: test-suite
 version: '0.0.1'

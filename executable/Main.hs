@@ -1,7 +1,15 @@
--- It is generally a good idea to keep all your business logic in your library
--- and only use it in the executable. Doing so allows others to use what you
--- wrote in their libraries.
-import qualified Example
+import qualified FunnyPrint ( funnyPrint )
+
+data TestData = TestData { int :: Int
+                         , str :: String
+                         , tup :: (Char, [Float])
+                         } deriving Show
+
+testData :: TestData
+testData = TestData { int = 42
+                    , str = "Hello, world!"
+                    , tup = ('A', [pi, exp 1])
+                    }
 
 main :: IO ()
-main = Example.main
+main = FunnyPrint.funnyPrint testData
