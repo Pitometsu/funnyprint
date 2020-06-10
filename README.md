@@ -23,8 +23,8 @@ You may use it like this:
 ```haskell
 :set -package funnyprint
 
-:def color (\_ -> return (":set -interactive-print=FunnyPrint.funnyPrint\n:set prompt \"" ++ FunnyPrint.prompt "λ " "%s" " ¬\\nλ > " ++ "\"" ++ "\n:set prompt2 \"" ++ FunnyPrint.prompt2 "λ" "" " | " ++ "\""))
-:def nocolor (\_ -> return ":set -interactive-print=print\n:set prompt \"%s> \"\n:set prompt2 \"%s| \"")
+:def color (\_ -> return (":set -interactive-print=FunnyPrint.funnyPrint\n:set prompt \"" ++ FunnyPrint.prompt "λ " "%s" " ¬\\nλ > " ++ "\"" ++ "\n:set prompt-cont \"" ++ FunnyPrint.prompt2 "λ" "" " | " ++ "\""))
+:def nocolor (\_ -> return ":set -interactive-print=print\n:set prompt \"%s> \"\n:set prompt-cont \"%s| \"")
 
 :color
 ```
